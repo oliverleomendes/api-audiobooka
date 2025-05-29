@@ -1,4 +1,4 @@
-# 📚 API Audiobooka
+# 📚 API Audiobook
 
 API RESTful para gerenciamento de audiobooks, capítulos, usuários e favoritos, desenvolvida em PHP com estrutura MVC e banco de dados MySQL.
 
