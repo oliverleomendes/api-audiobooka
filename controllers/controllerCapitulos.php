@@ -11,7 +11,7 @@ class controllerCapitulos {
         $this->model = new modelCapitulos($db);
     }
 
-    public function listar($id_capitulo = null || $id_livro = null) {
+    public function listar($id_capitulo = null, $id_livro = null) {
         if($id_capitulo) {
             return $this->model->getById($id_capitulo);
         } else if($id_livro) {

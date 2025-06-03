@@ -16,7 +16,7 @@ class modelCapitulos {
 
     public function getByLivro($id_livro) {
         $stmt = $this->conn->prepare("SELECT * FROM " . $this->table . " WHERE id_livro = ?");
-        $stmt->prepare([$id_livro]);
+        $stmt->execute([$id_livro]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
