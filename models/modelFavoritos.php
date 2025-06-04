@@ -22,7 +22,7 @@ class modelFavoritos {
 
     public function delete($id_usuario, $id_livro) {
         $stmt = $this->conn->prepare("DELETE FROM " . $this->table . " WHERE id_usuario = ? AND id_livro = ?");
-        $stmt->execute([$user_id, $id_livro]);
+        $stmt->execute([$id_usuario, $id_livro]);
         return ["message" => "Favorito removido"];
     }
 }
