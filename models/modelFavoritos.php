@@ -15,7 +15,7 @@ class modelFavoritos {
     }
 
     public function create($data) {
-        $stmt = $this->conn->prepare("INSERT IGNORE INTO " . $this->table . " (id_usuario, id_livro) VALUES (?, ?)");
+        $stmt = $this->conn->prepare("INSERT INTO " . $this->table . " (id_usuario, id_livro) VALUES (?, ?)");
         $stmt->execute([$data['id_usuario'], $data['id_livro']]);
         return ["message" => "Favorito adicionado"];
     }
